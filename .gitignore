@@ -29,3 +29,4 @@ Thumbs.db
 *.sbr
 *.nupkg
 _ReSharper*/
+/EppLib/.vs/EppLib
