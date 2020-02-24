@@ -8,10 +8,16 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ConsoleLogger.cs" />
     <Compile Include="Entities\AuthInfo.cs" />
     <Compile Include="Entities\Contact\ContactCheckResult.cs" />
     <Compile Include="Entities\Domain\DomainReleaseResponse.cs" />
     <Compile Include="Entities\Domain\DomainRelease.cs" />
+    <Compile Include="Extensions\Afilias\AssociationExtension.cs" />
+    <Compile Include="Extensions\Afilias\AssociationExtensionBase.cs" />
+    <Compile Include="Extensions\Afilias\ContactType.cs" />
+    <Compile Include="Extensions\Afilias\DomainCreate\AssociationDomainCreate.cs" />
+    <Compile Include="Extensions\Afilias\DomainCreate\AssociationDomainCreateExtension.cs" />
     <Compile Include="Extensions\Fury\FuryContactCreateExtension.cs" />
     <Compile Include="Extensions\Fury\FuryContactUpdateExtension .cs" />
     <Compile Include="Extensions\Fury\FuryDomainCreateExtension.cs" />
@@ -42,8 +48,8 @@
     <Compile Include="Extensions\LaunchPhase\ClaimCreate\ClaimCreate.cs" />
     <Compile Include="Extensions\LaunchPhase\ClaimCreate\ClaimCreateExtension.cs" />
     <Compile Include="Extensions\LaunchPhase\ClaimCreate\ClaimNotice.cs" />
-    <Compile Include="Extensions\Namestore\NamestoreCreateExtension.cs" />
     <Compile Include="Extensions\Namestore\NamestoreExtension.cs" />
+    <Compile Include="Extensions\Namestore\NamestoreExtensionBase.cs" />
     <Compile Include="Extensions\Nominet\ContactInfo\NominetDataQualityExtension.cs" />
     <Compile Include="Extensions\Nominet\DomainCheck\NominetDomainCheck.cs" />
     <Compile Include="Extensions\Nominet\DomainCheck\NominetDomainCheckExtension.cs" />
@@ -168,7 +174,10 @@
     <Compile Include="Extensions\Smallregistry\ContactCreate\SmallregistryContactPMCreateExtension.cs" />
     <Compile Include="Extensions\Smallregistry\ContactCreate\SmallregistryContactPPCreateExtension.cs" />
     <Compile Include="Extensions\Smallregistry\SmallregistryExtensionBase.cs" />
+    <Compile Include="IService.cs" />
     <Compile Include="ITransport.cs" />
+    <Compile Include="ProxyService.cs" />
+    <Compile Include="ProxyTransport.cs" />
     <Compile Include="Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TcpTransport.cs" />
