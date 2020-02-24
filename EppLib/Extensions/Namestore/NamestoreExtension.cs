@@ -1,14 +1,26 @@
-﻿using EppLib.Entities;
+﻿using System.Xml;
 
 namespace EppLib.Extensions.Namestore
 {
-    public abstract class NamestoreExtension : EppExtension
+    public class NamestoreExtension : NamestoreExtensionBase
     {
-        private string _ns = "http://www.verisign-grs.com/epp/namestoreExt-1.1";
-        protected override string Namespace
+        public NamestoreExtension(string subproduct)
         {
-            get { return _ns; }
-            set { _ns = value; }
+            SubProduct = subproduct;
+        }
+
+        public string SubProduct;
+
+        public override XmlNode ToXml(XmlDocument doc)
+        {
+            var root = CreateElement(doc, "namestoreExt");
+
+            if (SubProduct != null)
+            {
+                AddXmlElement(doc, root, "namestoreExt:subProduct", $"dot{SubProduct}");
+            }
+
+            return root;
         }
     }
 }
